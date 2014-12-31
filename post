@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -eu
+LXCSTART='/usr/bin/lxc-start'
+LXCWAIT='/usr/bin/lxc-wait'
+CONTAINER=invoices
+
+$LXCSTART -n $CONTAINER -d
+$LXCWAIT -n $CONTAINER -s 'RUNNING'

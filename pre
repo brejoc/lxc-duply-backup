@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -eu
+LXCSHUTDOWN='/usr/bin/lxc-stop'
+LXCWAIT='/usr/bin/lxc-wait'
+CONTAINER=invoices
+
+$LXCSHUTDOWN -n $CONTAINER
+$LXCWAIT -n $CONTAINER -s 'STOPPED'

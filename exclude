@@ -1,0 +1,7 @@
+- /var/lib/lxc/*/rootfs/lost+found
+- /var/lib/lxc/*/rootfs/media/*
+- /var/lib/lxc/*/rootfs/mnt/*
+- /var/lib/lxc/*/rootfs/proc/*
+- /var/lib/lxc/*/rootfs/run/*
+- /var/lib/lxc/*/rootfs/sys/*
+- /var/lib/lxc/*/rootfs/tmp/*
