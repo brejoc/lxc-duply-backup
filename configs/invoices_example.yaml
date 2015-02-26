@@ -1,0 +1,28 @@
+name: lxc-backup-invoices
+input-type: dir
+pkg-type: deb
+chdir: build
+args:
+    - etc
+config-files:
+    - /etc/duply/lxc_invoices/conf
+    - /etc/duply/lxc_invoices/exclude
+    - /etc/duply/lxc_invoices/post
+    - /etc/duply/lxc_invoices/pre
+    - /etc/cron.d/lxc_backup_invoices
+dependencies:
+    - duply
+    - lxc
+license: Public Domain
+maintainer: Jochen Breuer <breuer@dajool.com>
+url: http://brejoc.com
+deb-user: root
+deb-group: root
+architecture: all
+description: |-
+    Duply backup script to shutdown, backup and restart LX-Containers.
+build-vars:
+    config_path: /etc/duply/lxc_invoices
+    container_name: invoices
+    hour: 3
+    minute: 15

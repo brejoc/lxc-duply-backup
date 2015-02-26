@@ -1,0 +1,1 @@
+{{ minute }}  {{ hour }} * * *   root    /usr/bin/duply /etc/duply/lxc_{{ container_name}} backup
