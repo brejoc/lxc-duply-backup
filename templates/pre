@@ -3,7 +3,7 @@
 set -eu
 LXCSHUTDOWN='/usr/bin/lxc-stop'
 LXCWAIT='/usr/bin/lxc-wait'
-CONTAINER=invoices
+CONTAINER={{ container_name }}
 
 $LXCSHUTDOWN -n $CONTAINER
 $LXCWAIT -n $CONTAINER -s 'STOPPED'

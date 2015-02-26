@@ -3,7 +3,7 @@
 set -eu
 LXCSTART='/usr/bin/lxc-start'
 LXCWAIT='/usr/bin/lxc-wait'
-CONTAINER=invoices
+CONTAINER={{ container_name }}
 
 $LXCSTART -n $CONTAINER -d
 $LXCWAIT -n $CONTAINER -s 'RUNNING'

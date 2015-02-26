@@ -60,7 +60,7 @@ GPG_PW='_GPG_PASSWORD_'
 #            if you define the credentials as TARGET_USER, TARGET_PASS below 
 #            duply will url_encode them for you
 # TARGET='scheme://user[:password]@host[:port]/[/]path'
-TARGET='file:///backup/lxc_invoices'
+TARGET='file:///backup/lxc_{{ container_name }}'
 # optionally the username/password can be defined as extra variables
 # setting them here _and_ in TARGET results in an error
 #TARGET_USER='_backend_username_'
@@ -68,7 +68,7 @@ TARGET='file:///backup/lxc_invoices'
 
 # base directory to backup
 #SOURCE='/path/of/source'
-SOURCE='/var/lib/lxc/invoices/'
+SOURCE='/var/lib/lxc/{{ container_name}}/'
 
 # exclude folders containing exclusion file (since duplicity 0.5.14)
 # Uncomment the following two lines to enable this setting.
