@@ -35,6 +35,7 @@ def build_deb(config):
 
     # copy cron job to /etc/cron.d/
     run("cp ./build_configs/lxc_backup_%s ./build/etc/cron.d/" % (config_values['build-vars']['container_name'], ))
+    run("chmod 644 ./build/etc/cron.d/lxc_backup_%s" % (config_values['build-vars']['container_name'], ))
 
     
     # generate version number
