@@ -8,12 +8,17 @@ The origins of lxc-duply-backup can be found in my [blog post](http://brejoc.com
 Containers are stopped before the backup and started right after the backup to make sure the backups are clean. Otherwise data might still be in memory and not on disk.
 
 
-# Dependencies
+# Dependencies (for building packages)
 * [invoke](https://github.com/pyinvoke/invoke)
 * [fpm](https://github.com/jordansissel/fpm/wiki)
 * [PyYAML](http://pyyaml.org/)
 * [sh](https://github.com/amoffat/sh)
 
+# Dependencies (for the package itself)
+* [duply](http://duply.net/)
+* [LXC](https://linuxcontainers.org/)
+
+Debian/Ubuntu: `apt-get install lxc duply`
 
 # Usage
 
