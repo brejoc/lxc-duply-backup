@@ -4,7 +4,7 @@ import os
 import sys
 import yaml
 from invoke import run, task
-from tasks_helper import *
+from basalt.tasks import *
 
 @task()
 def clean(*args, **kwargs):
@@ -17,7 +17,7 @@ def clean(*args, **kwargs):
 
 
 @task("clean", "prepare_paths", "config_duply_config", "config_post", "config_pre", "config_exclude", "config_cron_job")
-def build_deb(config):
+def build(config):
     """\
     Prepares the build and generates the package.
     """
