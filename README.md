@@ -13,6 +13,9 @@ Containers are stopped before the backup and started right after the backup to m
 * [fpm](https://github.com/jordansissel/fpm/wiki)
 * [PyYAML](http://pyyaml.org/)
 * [sh](https://github.com/amoffat/sh)
+* [Jinja2](http://jinja.pocoo.org/)
+
+Or take a look at [basalt](https://github.com/basalt/basalt).
 
 # Dependencies (for the package itself)
 * [duply](http://duply.net/)
