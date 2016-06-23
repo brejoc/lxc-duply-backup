@@ -26,3 +26,4 @@ build-vars:
     container_name: invoices
     hour: 3
     minute: 15
+    max_full_backups: 2
