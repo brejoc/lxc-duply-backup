@@ -83,7 +83,7 @@ SOURCE='/var/lib/lxc/{{ container_name}}/'
 # Number of full backups to keep. Used for the "purge-full" command. 
 # See duplicity man page, action "remove-all-but-n-full".
 # defaults to 1, if not set 
-MAX_FULL_BACKUPS=2
+MAX_FULL_BACKUPS={{ max_full_backups }}
 
 # activates duplicity --full-if-older-than option (since duplicity v0.4.4.RC3) 
 # forces a full backup if last full backup reaches a specified age, for the 
