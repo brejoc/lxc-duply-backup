@@ -2,8 +2,10 @@
 
 set -eu
 LXCSHUTDOWN='/usr/bin/lxc-stop'
+LXCATTACH='/usr/bin/lxc-attach'
 LXCWAIT='/usr/bin/lxc-wait'
 CONTAINER={{ container_name }}
 
+$LXCATTACH -n $CONTAINER -- /usr/bin/apt-get clean
 $LXCSHUTDOWN -n $CONTAINER
 $LXCWAIT -n $CONTAINER -s 'STOPPED'
