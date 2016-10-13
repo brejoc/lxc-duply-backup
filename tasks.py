@@ -33,6 +33,9 @@ def build(config):
     run("cp ./build_configs/post %s/." % (build_path_config, ))
     run("cp ./build_configs/pre %s/." % (build_path_config, ))
 
+    # setting permission to 700 for duply config files
+    run("chmod 700 %s" % (build_path_config, ))
+
     # copy cron job to /etc/cron.d/
     run("cp ./build_configs/lxc_backup_%s ./build/etc/cron.d/" % (config_values['build-vars']['container_name'], ))
     run("chmod 644 ./build/etc/cron.d/lxc_backup_%s" % (config_values['build-vars']['container_name'], ))
